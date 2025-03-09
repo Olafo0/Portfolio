@@ -1,0 +1,163 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: white;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 300px 300px;
+    grid-template-rows: 170px 300px;
+    gap: 20px;
+    max-width: 620px;
+    width: 100%;
+}
+
+.box{
+    background-color: #e0e0e0;
+    border-radius: 15px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: box-shadow 1s;
+    cursor: default;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover{
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+
+}
+
+
+.profile {
+    background-color: #e0e0e0;
+    border-radius: 15px;
+    animation: fadeIn 0.8s ease-out;
+    animation: slideInRight 1.6s ease-out;
+}
+
+.profile-items{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.profile-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-info img{
+    width: 20px;
+    height: 20px;
+    margin-top: 10px
+}
+
+.profile-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+.skills {
+    background-color: #e0e0e0;
+    border-radius: 15px;
+    font-size:smaller;
+
+    animation: fadeIn 1s ease-out 0.2s;
+    animation: slideInUp 1.8s ease-out;
+    animation-fill-mode: both;
+}
+
+.skills-items{
+}
+
+.skills-items ul{
+    list-style: none;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.skils-items li{
+    padding-bottom: 5px;
+}
+
+.skills-items h2{
+    text-decoration: underline;
+}
+
+.skills-items h3{
+    font-weight: bold;
+}
+
+.career {
+    background-color: #e0e0e0;
+    border-radius: 15px;
+    grid-row: span 2;
+
+    animation: fadeIn 1.2s ease-out 0.4s;
+    animation: slideInLeft 2s ease-out;
+
+    animation-fill-mode: both;
+}
+
+.career-items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.career img{
+    width: 50px;
+    height: 30px;
+}
+
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(-40px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInLeft{
+    from { transform: translateX(40px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInUp{
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+  
